@@ -1,6 +1,9 @@
 package animal;
 
 import edible.Edible;
+import fruit.Fruit;
+import fruit.Orange;
+import fruit.Apple;
 
 public class AbstractAndInterfaceTests {
     public static void main(String[] args) {
@@ -14,6 +17,14 @@ public class AbstractAndInterfaceTests {
                 Edible edibler = (Chicken) animal;
                 System.out.println(edibler.howToEat());
             }
+        }
+
+
+        Fruit[] fruits = new Fruit[2];
+        fruits[0] = new Orange();
+        fruits[1] = new Apple();
+        for (Fruit fruit : fruits) {
+            System.out.println(fruit.howToEat());
         }
     }
 }
